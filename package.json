@@ -1,0 +1,23 @@
+{
+  "name": "css.js",
+  "version": "0.1.0",
+  "description": "CSS Helpers with Javascript",
+  "main": "css.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joni2back/css.js.git"
+  },
+  "keywords": [
+    "css",
+    "helpers"
+  ],
+  "author": "joni2back",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joni2back/css.js/issues"
+  },
+  "homepage": "https://github.com/joni2back/css.js#readme"
+}
