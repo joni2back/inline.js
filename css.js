@@ -1,10 +1,17 @@
 (function(){
 
     var formulas = {
+        t: 'top',
+        b: 'bottom',
+        l: 'left',
+        r: 'right',
+
         w: 'width',
         h: 'height',
+
         p: 'padding',
         m: 'margin',
+
         br: 'borderRadius',
         fs: 'fontSize',
         fw: 'fontWeight',
@@ -22,7 +29,7 @@
     }
    
     var useFormula = function(className) {
-        var pieces = className.match(/(^[a-z]{1,3})+([0-9pxem\%]{1,5})/);
+        var pieces = className.match(/(^[a-z]{1,3})+([0-9pxempt\%]{1,5})/);
         var formula = pieces && formulas[pieces[1]];
         return formula && {
             key: formula,
@@ -38,14 +45,14 @@
         });
     }
 
-    var apply = function(scopeElement) {
+    var apply = function(scopeElement, observe) {
         var scope = scopeElement || window.document;
         var elements = scope.getElementsByTagName('*');
         for (var i in elements) {
             var element = elements[i];
             if (typeof element === 'object') {
-                element.className && parseElementClasses(element);
-                observer.observe(element, { attributes : true, attributeFilter : ['style', 'class'] });
+                parseElementClasses(element);
+                observe && observer.observe(element, { attributes : true, attributeFilter : ['class'] });
             }
         }
     };
@@ -58,10 +65,10 @@
         });    
     });
 
-
-    if (window && window.document) {
+    if (typeof window === 'object' && window.document) {
         window.cssjs = {
-            apply: apply
+            apply: apply,
+            formulas: formulas
         }
         return;
     }
