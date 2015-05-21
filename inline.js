@@ -27,7 +27,7 @@
         pl: 'paddingLeft',
         pr: 'paddingRight',
     }
-   
+
     var useFormula = function(className) {
         var pieces = className.match(/(^[a-z]{1,3})+([0-9pxempt\%]{1,5})/);
         var formula = pieces && formulas[pieces[1]];
@@ -62,11 +62,11 @@
             var element = mutationRecord.target;
             element.lastClassName !== element.className && parseElementClasses(element);
             element.lastClassName = element.className;
-        });    
+        });
     });
 
     if (typeof window === 'object' && window.document) {
-        window.cssjs = {
+        window.inlinejs = {
             apply: apply,
             formulas: formulas
         }

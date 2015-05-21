@@ -1,4 +1,4 @@
-# css.js
+# inline.js
 CSS Helpers with Javascript
 -------
 
@@ -22,9 +22,9 @@ Some formulas:
 ```js
 // use without jquery
 var scope = window.document.getElementById('container');
-window.cssjs.apply(scope);
+window.inlinejs.apply(scope);
 
 // with jquery
 var scope = $('#container');
-window.cssjs.apply(scope);
+window.inlinejs.apply(scope);
 ```

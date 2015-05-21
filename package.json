@@ -1,14 +1,14 @@
 {
-  "name": "css.js",
+  "name": "inline.js",
   "version": "0.1.0",
   "description": "CSS Helpers with Javascript",
-  "main": "css.js",
+  "main": "inline.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joni2back/css.js.git"
+    "url": "git+https://github.com/joni2back/inline.js.git"
   },
   "keywords": [
     "css",
@@ -17,7 +17,7 @@
   "author": "joni2back",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joni2back/css.js/issues"
+    "url": "https://github.com/joni2back/inline.js/issues"
   },
-  "homepage": "https://github.com/joni2back/css.js#readme"
+  "homepage": "https://github.com/joni2back/inline.js#readme"
 }
