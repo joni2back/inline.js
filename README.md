@@ -10,12 +10,12 @@ Some formulas:
 <div class="mt25"></div>
 ```
 ```html
-<!-- Add font-size of of 50px -->
-<div class="fs50">hello!</div>
+<!-- Add font-size of 14pt -->
+<div class="fs14pt">hello!</div>
 ```
 ```html
 <!-- Combine helpers -->
-<div class="fs50 mt25 mb0 ml50 br30%">hello!</div>
+<div class="fs14pt mt25 mb0 ml2em br30%">hello!</div>
 ```
 
 -------

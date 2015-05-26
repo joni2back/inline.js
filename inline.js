@@ -29,11 +29,12 @@
     }
 
     var useFormula = function(className) {
-        var pieces = className.match(/(^[a-z]{1,3})+([0-9pxempt\%]{1,5})/);
+        var pieces = className.match(/(^[a-z]{1,23})([0-9]{1,4})([pxempt\%]{1,2})?/);
         var formula = pieces && formulas[pieces[1]];
+        var measure = pieces && pieces[3] || 'px';
         return formula && {
             key: formula,
-            value: pieces[2]
+            value: pieces[2] + measure
         };
     };
 
@@ -45,14 +46,14 @@
         });
     }
 
-    var apply = function(scopeElement, observe) {
+    var apply = function(scopeElement, dontObserve) {
         var scope = scopeElement || window.document;
         var elements = scope.getElementsByTagName('*');
         for (var i in elements) {
             var element = elements[i];
             if (typeof element === 'object') {
                 parseElementClasses(element);
-                observe && observer.observe(element, { attributes : true, attributeFilter : ['class'] });
+                !dontObserve && observer.observe(element, { attributes: true, attributeFilter: ['class'] });
             }
         }
     };
@@ -66,11 +67,10 @@
     });
 
     if (typeof window === 'object' && window.document) {
-        window.inlinejs = {
+        return window.inlinejs = {
             apply: apply,
             formulas: formulas
-        }
-        return;
+        };
     }
 
     throw new Error('Invalid environment');
