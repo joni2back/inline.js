@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script type="text/javascript" src="https://cdn.rawgit.com/joni2back/inline.js/master/inline.js"></script>
   </head>
-  <body>
+  <body id="container">
     <section class="page-header">
       <h1 class="project-name">inline.js</h1>
       <h2 class="project-tagline">CSS Helpers with Javascript</h2>
@@ -31,15 +31,13 @@
 
 <hr>
 
-<div class="highlight highlight-js"><pre><span class="pl-k">var</span> observe <span class="pl-k">=</span> <span class="pl-c1">true</span>
-
-<span class="pl-c">// use without jquery</span>
+<div class="highlight highlight-js"><pre><span class="pl-c">// use without jquery</span>
 <span class="pl-k">var</span> scope <span class="pl-k">=</span> <span class="pl-c1">window</span>.<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>container<span class="pl-pds">'</span></span>);
-<span class="pl-c1">window</span>.inlinejs.<span class="pl-c1">apply</span>(scope, observe);
+<span class="pl-c1">window</span>.inlinejs.<span class="pl-c1">apply</span>(scope);
 
 <span class="pl-c">// with jquery</span>
 <span class="pl-k">var</span> scope <span class="pl-k">=</span> $(<span class="pl-s"><span class="pl-pds">'</span>#container<span class="pl-pds">'</span></span>);
-<span class="pl-c1">window</span>.inlinejs.<span class="pl-c1">apply</span>(scope, observe);</pre></div>
+<span class="pl-c1">window</span>.inlinejs.<span class="pl-c1">apply</span>(scope);</pre></div>
 
       <h3><a id="use-inline-css-helpers-in-a-fashion-way" class="anchor" href="#use-inline-css-helpers-in-a-fashion-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try it</h3>
 
