@@ -1,4 +1,4 @@
-(function(){
+(function(window){
 
     var formulas = {
         t: 'top',
@@ -25,10 +25,18 @@
         pt: 'paddingTop',
         pb: 'paddingBottom',
         pl: 'paddingLeft',
-        pr: 'paddingRight',
-    }
+        pr: 'paddingRight'
+    };
 
-    var useFormula = function(className) {
+    var observer = new window.MutationObserver(function(mutations) {
+        mutations.forEach(function(mutationRecord) {
+            var element = mutationRecord.target;
+            element.lastClassName !== element.className && parseElementClasses(element);
+            element.lastClassName = element.className;
+        });
+    });
+
+    function useFormula(className) {
         var pieces = className.match(/(^[a-z]{1,23})([0-9]{1,4})([pxempt\%]{1,2})?/);
         var formula = pieces && formulas[pieces[1]];
         var measure = pieces && pieces[3] || 'px';
@@ -38,7 +46,7 @@
         };
     };
 
-    var parseElementClasses = function(element) {
+    function parseElementClasses(element) {
         var classNames = element && element.className && element.className.split(' ') || [];
         classNames.forEach(function(className) {
             var style = useFormula(className);
@@ -46,7 +54,7 @@
         });
     }
 
-    var apply = function(scopeElement, dontObserve) {
+    function apply(scopeElement, dontObserve) {
         var scope = scopeElement || window.document;
         var elements = scope.getElementsByTagName('*');
         for (var i in elements) {
@@ -57,14 +65,6 @@
             }
         }
     };
-
-    var observer = new window.MutationObserver(function(mutations) {
-        mutations.forEach(function(mutationRecord) {
-            var element = mutationRecord.target;
-            element.lastClassName !== element.className && parseElementClasses(element);
-            element.lastClassName = element.className;
-        });
-    });
 
     if (typeof window === 'object' && window.document) {
         return window.inlinejs = {
