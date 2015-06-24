@@ -28,7 +28,3 @@ window.inlinejs.apply(scope);
 var scope = $('#container');
 window.inlinejs.apply(scope);
 ```
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joni2back/inline.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
