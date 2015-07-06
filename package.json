@@ -1,7 +1,7 @@
 {
   "name": "inline.js",
   "version": "0.1.0",
-  "description": "CSS Helpers with Javascript",
+  "description": "Fashion-Live CSS Helpers with Javascript.",
   "main": "inline.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,13 +11,19 @@
     "url": "git+https://github.com/joni2back/inline.js.git"
   },
   "keywords": [
-    "css",
-    "helpers"
+    "inlinejs"
   ],
-  "author": "joni2back",
+  "author": "Jonas Sciangula Street",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/joni2back/inline.js/issues"
   },
-  "homepage": "https://github.com/joni2back/inline.js#readme"
+  "homepage": "https://github.com/joni2back/inline.js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.6.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-uglify": "^1.2.0"
+  }
 }

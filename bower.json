@@ -1,0 +1,23 @@
+{
+  "name": "inline.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/joni2back/inline.js",
+  "authors": [
+    "Jonas Sciangula Street <joni2back@gmail.com>"
+  ],
+  "description": "Fashion-Live CSS Helpers with Javascript.",
+  "main": "inline.js",
+  "keywords": [
+    "inlinejs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
