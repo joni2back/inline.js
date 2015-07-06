@@ -24,11 +24,16 @@ Some formulas:
 
 -------
 ```js
-// use without jquery
-var scope = window.document.getElementById('container');
-window.inlinejs.apply(scope);
-
-// with jquery
-var scope = $('#container');
-window.inlinejs.apply(scope);
+// usage
+var container = window.document.getElementById('container');
+window.inlinejs.apply(container);
 ```
+
+### Contribute
+To contribute to the project you can simply fork this repo, then do a pull request.
+
+### Versioning
+For transparency into our release cycle and in striving to maintain backward compatibility, inline.js is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+
+### Copyright and license
+Code and documentation released under [the MIT license](https://github.com/joni2back/inline.js/blob/master/LICENSE).
